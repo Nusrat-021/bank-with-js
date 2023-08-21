@@ -19,30 +19,34 @@
         class="grid grid-cols-1 md:grid-cols-3 gap-4 text-white font-medium mt-10"
       >
       <!-- deposit -->
-        <div class="bg-green-600 p-8 rounded-lg">
+        <div class="bg-emerald-400 p-8 rounded-lg">
 
           <h3 class="text-xl">Deposit</h3>
           <p class="text-3xl">$<span id="deposit-total">5</span></p>
         </div>
-        <div class="bg-pink-800 p-8 rounded-lg">
+
+        <!-- withdraw -->
+        <div class="bg-pink-500 p-8 rounded-lg">
           <h3 class="text-xl">Withdraw</h3>
-          <p class="text-3xl">$<span>0</span></p>
+          <p class="text-3xl">$<span id="withdraw-total">0</span></p>
         </div>
 
         <!-- balance -->
         <div class="bg-rose-500 p-8 rounded-lg">
           <h3 class="text-xl">Balance</h3>
-          <p class="text-3xl">$<span id="total-balance">1235</span></p>
+          <p class="text-3xl">$<span id="total-balance">1240</span></p>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 text-white mt-10">
+
+      <!-- Amount from user to withdraw -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-white mt-10">
 
         <!-- deposit -->
         <div class="bg-sky-400 rounded-lg p-10 font-medium">
           <h2 class="text-3xl">Please Deposit</h2>
           <input
-            class="w-full md:w-9/12 block my-5 p-2 rounded-sm text-black"
+            class="w-full lg:w-9/12 block my-5 p-2 rounded-sm text-black"
             type="text"
             name=""
             id="deposit-field"
@@ -54,13 +58,13 @@
         <div class="bg-purple-400 rounded-lg p-10 font-medium">
           <h2 class="text-3xl">Please Withdraw</h2>
           <input
-            class="w-full md:w-9/12 block my-5 p-2 rounded-sm"
+            class="w-full lg:w-9/12 block my-5 p-2 rounded-sm text-black"
             type="text"
             name=""
-            id=""
+            id="withdraw-field"
             placeholder="$ amount you want to Withdraw"
           />
-          <button class="bg-blue-800 px-8 py-2 rounded-md">Withdraw</button>
+          <button id="btn-withdraw" class="bg-blue-800 px-8 py-2 rounded-md">Withdraw</button>
         </div>
 
         
@@ -70,5 +74,6 @@
 
     <!-- js files -->
     <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
   </body>
 </html>

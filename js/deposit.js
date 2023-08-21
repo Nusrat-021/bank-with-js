@@ -3,28 +3,24 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const depositField = document.getElementById('deposit-field');
     
     const newDepositAmount = parseFloat(depositField.value);
-    // console.log(newDepositAmount);
+    console.log(newDepositAmount);
     
     // validation the value of the deposit input field
-    if(typeof newDepositAmount !== 'number')
-    {
-        alert('Provide number of amount');
+    
+    if(isNaN(newDepositAmount)){
+        alert('Please provide valid number to deposit');
         return;
     }
 
-    else if(!newDepositAmount){
-        alert('Please provide some value to deposit');
-        return;
-    }
-    else if(newDepositAmount < 5)
+    if(newDepositAmount < 0)
     {
         alert('Negative numbers are not allowed');
         return;
     }
 
     // previous deposit amount
-    const depositElement = document.getElementById('deposit-total');
-    const previousDepositTotalString = depositElement.innerText;
+    const depositTotalElement = document.getElementById('deposit-total');
+    const previousDepositTotalString = depositTotalElement.innerText;
     const previousDepositTotal = parseFloat(previousDepositTotalString);
     // console.log(previousDepositTotal);
     
@@ -33,7 +29,7 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     // console.log(currentDepositTotal);
 
     // set new deposit amount
-    depositElement.innerText=currentDepositTotal;
+    depositTotalElement.innerText=currentDepositTotal;
 
 
     // total balance increase
