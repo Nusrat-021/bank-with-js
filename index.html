@@ -11,20 +11,25 @@
     <header>
       <h1 class="text-5xl text-center mt-6">
         Welcome to
-        <span class="font-semibold text-yellow-700 ">Your Bank!!!!!</span>
+        <span class="font-semibold text-yellow-700">Your Bank!!!!!</span>
       </h1>
     </header>
 
-    <main>
-        <section class="bg-amber-100 w-9/12 mx-auto mt-12 p-8">
+    <main class="w-full md:w-9/12 mx-auto p-3 md:p-0">
+        <section class="bg-amber-100 mt-12 p-8">
             <h3 class="text-3xl font-semibold mb-4 text-center">Please Login</h3>
             <div class="flex flex-col justify-center items-center">
-                <input class="w-9/12 p-2 block" type="email" name="" id="" placeholder="your email">
-                <input class="w-9/12 my-4 p-2 block" type="password" name="" id="" placeholder="password">
-                <button class="text-white bg-amber-600 hover:bg-amber-700 font-medium p-3 rounded-md">Submit</button>
+                <input class="md:w-9/12 p-2 block" type="email" name="" id="user-email" placeholder="your email">
+                <input class="md:w-9/12 my-4 p-2 block" type="password" name="" id="user-password" placeholder="password">
+                <button id="btn-submit" class="text-white bg-amber-700 font-medium px-5 py-3 rounded-md">Submit</button>
 
             </div>
         </section>
     </main>
+
+
+
+    <!-- js files -->
+    <script src="js/login.js"></script>
   </body>
 </html>
